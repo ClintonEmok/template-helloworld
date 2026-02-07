@@ -9,6 +9,11 @@ import { ThesisVideo } from "./ThesisVideo";
 import { AnalyticsThesisVideo } from "./AnalyticsThesisVideo";
 import { ThesisTourVideo } from "./ThesisTourVideo";
 import { CombinedThesisVideo } from "./CombinedThesisVideo";
+import { ThesisConceptVideo } from "./ThesisConceptVideo";
+import { ThesisConceptVideo3D } from "./ThesisConceptVideo3D";
+import { FullDemoVideo } from "./FullDemoVideo";
+import { PrayerMeetingFeb2026 } from "./PrayerMeetingFeb2026";
+import { PrayerMeetingIntro } from "./PrayerMeetingIntro";
 import { z } from "zod";
 
 // Each <Composition> is an entry in the sidebar!
@@ -16,6 +21,38 @@ import { z } from "zod";
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="ThesisConcept3D"
+        component={ThesisConceptVideo3D}
+        durationInFrames={90 + 150 + 180}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="ThesisConceptExplainer"
+        component={ThesisConceptVideo}
+        durationInFrames={90 + 150 + 150}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="PrayerMeetingIntro"
+        component={PrayerMeetingIntro}
+        durationInFrames={540}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="PrayerMeetingFeb2026"
+        component={PrayerMeetingFeb2026}
+        durationInFrames={450}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
       <Composition
         id="FinalThesisVideo"
         component={CombinedThesisVideo}
@@ -27,7 +64,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="ThesisTour"
         component={ThesisTourVideo}
-        durationInFrames={1560}
+        durationInFrames={36 * 30}
         fps={30}
         width={1920}
         height={1080}
@@ -86,16 +123,12 @@ export const RemotionRoot: React.FC = () => {
         }}
       />
       <Composition
-        id="SalesPitchVideo"
-        component={SalesBrandVideo}
-        durationInFrames={75 + 90 + 75 + 90}
+        id="FullDemoVideo"
+        component={FullDemoVideo}
+        durationInFrames={90 + 60 + 36 * 30 + 90}
         fps={30}
         width={1920}
         height={1080}
-        schema={z.object({
-          name: z.string(),
-        })}
-        defaultProps={{ name: "Clinton" }}
       />
       <Composition
         id="TitleCard"

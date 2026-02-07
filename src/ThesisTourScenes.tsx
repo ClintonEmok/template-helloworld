@@ -4,7 +4,7 @@ import {
   interpolate,
   useCurrentFrame,
 } from 'remotion';
-import { loadFont } from "@remotion/google-fonts/Inter";
+import { loadFont } from "@remotion/google-fonts/Outfit";
 import { MapContainer, TileLayer, CircleMarker, Polyline, Tooltip } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { WarpedCube } from './WarpedCube';
